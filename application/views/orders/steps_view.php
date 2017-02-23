@@ -1143,10 +1143,20 @@
 					total +=  parseFloat($('#laundry').data('price'));
 				}
 
-				var pickup = new Date($('#pick_up_date').val());
+				// var pickup = new Date($('#pick_up_date').val());
+				// var pickup = moment($('#pick_up_date').val()).toDate();
+				var d_datetime;
+				if($('input[name=key_set]:checked').val() == 'pick_up')
+					d_datetime = $('#key_pick_up_from').val();
+				else if($('input[name=key_set]:checked').val() == 'drop_off')
+					d_datetime = $('#key_drop_off_date').val();
+				var dt_arr = d_datetime.split(" ");
+				var d_arr = dt_arr[0].split("/");
+				var t_arr = dt_arr[1].split(":");
+				var pickup = new Date(d_arr[2], d_arr[1] - 1, d_arr[0], t_arr[0], t_arr[1]);
 				<?php date_default_timezone_set('Australia/Sydney'); ?>
 				var currentTime = "<?php echo date('F j Y h:i:s A'); ?>";
-				var nowTime = new Date( currentTime);
+				var nowTime = new Date(currentTime);
 				// var pickup_time = Math.abs(( pickup - new Date() ) / 36e5);
 				var pickup_time = Math.abs(( pickup - nowTime ) / 36e5);
 
@@ -1196,7 +1206,7 @@
 			}
 		})
 		.on('finished.fu.wizard', function(e) {
-			if(!$('#key_set-form').valid() && $('#pick_up_date').val() ){
+			if(!$('#key_set-form').valid() ){// && $('#pick_up_date').val() ){
 				e.preventDefault();
 			}else{
 				var $personal_info = $('#personal_info-form').serialize(),
@@ -1212,7 +1222,7 @@
 				$key_set_date = $('#key_'+$key_set_val+'-form').serialize();
 				var form = $personal_info+'&'+$services+'&'+$keeper+'&'+$more_info+'&'+$key_set+'&'+$key_set_date+'&address='+$address+'&total='+$('#info_total').data('total');
 				$('.btn-next').prop('disabled',true);
-				$.ajax({
+				/*$.ajax({
 					url: 'order/steps/addOrder',
 					data: form,
 					dataType: 'json',
@@ -1240,6 +1250,38 @@
 							$('.btn-next').prop('disabled',false);
 						}
 					}
+				});*/
+				$.ajax({
+					type : 'post',
+					url  : 'order/steps/addOrder',
+					data : form,
+					dataType: 'json'
+				})
+				.done(function(res) {
+					var payer_data = JSON.stringify(res['data']);
+					if( res['success'] ){
+						var url = 'payments';
+						var v_form = $('<form action="' + url + '" method="post">' +
+							'<input type="text" name="api_url" value="" />' +
+							'</form>');
+						$('body').append(v_form);
+						$('input[name=api_url]').val(payer_data);
+						v_form.submit();
+					}else{
+						bootbox.dialog({
+							message: res, 
+							buttons: {
+								"success" : {
+									"label" : "OK",
+									"className" : "btn-sm btn-primary"
+								}
+							}
+						});
+						$('.btn-next').prop('disabled',false);
+					}
+				})
+				.fail(function(jqXHR, textStatus) {
+					console.log( "ajax error" );
 				});
 			}
 		}).on('stepclick.fu.wizard', function(e){
