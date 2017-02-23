@@ -117,7 +117,7 @@
 					</div>
 					<div class="col-xs-6 col-sm-3 pricing-box">
 						<div class="widget-box widget-color-green">
-							<input type="checkbox" name="services[]" id="loundry" value="loundry" class="hide">
+							<input type="checkbox" name="services[]" id="laundry" value="laundry" class="hide">
 							<div class="widget-header">
 								<h5 class="widget-title bigger lighter">Basic Package</h5>
 							</div>
@@ -132,8 +132,8 @@
 								</div>
 
 								<div>
-									<a href="#loundry" class="btn_services btn btn-block btn-success">
-										<h3>Loundry</h3>
+									<a href="#laundry" class="btn_services btn btn-block btn-success">
+										<h3>Laundry</h3>
 									</a>
 								</div>
 							</div>
@@ -380,10 +380,10 @@
 						</div>
 
 						<div class="prices profile-info-row hide">
-							<div class="profile-info-name"> Loundry </div>
+							<div class="profile-info-name"> Laundry </div>
 
 							<div class="profile-info-value">
-								<span id="info_loundry"></span>
+								<span id="info_laundry"></span>
 							</div>
 						</div>
 

@@ -44,11 +44,11 @@
 				</div>
 
 				<div class="form-group">
-					<label class="col-sm-3 control-label no-padding-right" for="loundry"> Loundry </label>
+					<label class="col-sm-3 control-label no-padding-right" for="laundry"> Laundry </label>
 					<div class="col-sm-9">
-						<input id="loundry" data-label="Loundry" data-id="<?php echo ( isset($loundry->service_id) ) ? $loundry->service_id : ''; ?>" class="col-xs-10 col-sm-5 intput_value" placeholder="not set yet" type="text" value="<?php echo ( isset($loundry->service_price) ) ? $loundry->service_price : ''; ?>">
+						<input id="laundry" data-label="Laundry" data-id="<?php echo ( isset($laundry->service_id) ) ? $laundry->service_id : ''; ?>" class="col-xs-10 col-sm-5 intput_value" placeholder="not set yet" type="text" value="<?php echo ( isset($laundry->service_price) ) ? $laundry->service_price : ''; ?>">
 						<span class="input-group-btn">
-							<button data-id="loundry" class="btn-service btn btn-success btn-sm" type="button">
+							<button data-id="laundry" class="btn-service btn btn-success btn-sm" type="button">
 								<span class="ace-icon fa fa-pencil icon-on-right bigger-110"></span>
 								Update
 							</button>
@@ -178,7 +178,7 @@
 						switch(v.service_name){
 							case 'Check In': var input = $('#check_in'); break;
 							case 'Check Out': var input = $('#check_out'); break;
-							case 'Loundry': var input = $('#loundry'); break;
+							case 'Laundry': var input = $('#laundry'); break;
 							case 'Night Bookings': var input = $('#nighy_booking'); break;
 							case 'Saturdays': var input = $('#saturdays'); break;
 							case 'Sundays': var input = $('#sundays'); break;

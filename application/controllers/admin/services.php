@@ -19,7 +19,7 @@ class Services extends CI_Controller {
 		$data['content'] = 'admin/services_view';
 		$data['check_in'] = $this->getServices(1,'Check in');
 		$data['check_out'] = $this->getServices(1,'Check out');
-		$data['loundry'] = $this->getServices(1,'Loundry');
+		$data['laundry'] = $this->getServices(1,'Laundry');
 		$this->load->view('base',$data);
 	}
 

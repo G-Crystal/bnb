@@ -422,8 +422,8 @@
 					</div>
 					<div class="col-xs-6 col-sm-3 pricing-box">
 						<div class="widget-box widget-color-green">
-							<?php $loundry = getService('Loundry',$services) ?>
-							<input type="checkbox" data-price="<?php echo $loundry->service_price ?>" name="services[]" id="loundry" value="<?php echo $loundry->service_id ?>" class="hide">
+							<?php $laundry = getService('Laundry',$services) ?>
+							<input type="checkbox" data-price="<?php echo $laundry->service_price ?>" name="services[]" id="laundry" value="<?php echo $laundry->service_id ?>" class="hide">
 							<div class="widget-header">
 								<h5 class="widget-title bigger lighter">Basic Package</h5>
 							</div>
@@ -433,13 +433,13 @@
 									<i class="ace-icon fa fa-flask bigger-500 green"></i>
 									<hr />
 									<div class="price">
-										$ <?php echo $loundry->service_price ?>
+										$ <?php echo $laundry->service_price ?>
 									</div>
 								</div>
 
 								<div>
-									<a href="#loundry" class="btn_services btn btn-block btn-success">
-										<h3><?php echo $loundry->service_name ?></h3>
+									<a href="#laundry" class="btn_services btn btn-block btn-success">
+										<h3><?php echo $laundry->service_name ?></h3>
 									</a>
 								</div>
 							</div>
@@ -685,10 +685,10 @@
 						</div>
 
 						<div class="prices profile-info-row hide">
-							<div class="profile-info-name"> Loundry </div>
+							<div class="profile-info-name"> Laundry </div>
 
 							<div class="profile-info-value">
-								<span id="info_loundry"></span>
+								<span id="info_laundry"></span>
 							</div>
 						</div>
 
@@ -1056,10 +1056,10 @@
 					total +=  parseFloat($('#property_size_value').val());
 				}
 
-				if( $('#loundry').is(":checked")  ){
-					$('#info_loundry').html( _currency+ $('#loundry').data('price') );
-					$('#info_loundry').closest('.profile-info-row').removeClass('hide');
-					total +=  parseFloat($('#loundry').data('price'));
+				if( $('#laundry').is(":checked")  ){
+					$('#info_laundry').html( _currency+ $('#laundry').data('price') );
+					$('#info_laundry').closest('.profile-info-row').removeClass('hide');
+					total +=  parseFloat($('#laundry').data('price'));
 				}
 
 				var pickup = new Date($('#pick_up_date').val());
