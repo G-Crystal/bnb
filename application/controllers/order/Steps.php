@@ -70,7 +70,11 @@ class Steps extends CI_Controller {
 
 		
 		// Modify and filter inputs
-		$formData['pick_up_date'] = date('Y-m-d H:i:s',strtotime($formData['pick_up_date'])); // Convert string time to date time
+		// $formData['pick_up_date'] = date('Y-m-d H:i:s',strtotime($formData['pick_up_date'])); // Convert string time to date time
+		if($formData['key_set'] == 'pick_up')
+			$formData['pick_up_date'] = date('Y-m-d H:i:s',strtotime($formData['key_pick_up_from']));
+		else if($formData['key_set'] == 'drop_off')
+			$formData['pick_up_date'] = date('Y-m-d H:i:s',strtotime($formData['key_drop_off_date']));
 		
 		$address = (array)json_decode($formData['address']);
 
@@ -205,7 +209,11 @@ class Steps extends CI_Controller {
 		$services = $this->getServices();
 
 		// Add Extra service if true
-		$pick_up_date = $client['pick_up_date'];
+		// $pick_up_date = $client['pick_up_date'];
+		if($client['key_set'] == 'pick_up')
+			$pick_up_date = $client['key_pick_up_from'];
+		else if($client['key_set'] == 'drop_off')
+			$pick_up_date = $client['key_drop_off_date'];
 		$service_ids = json_decode($client['services']);
 
 		// Services
@@ -232,8 +240,10 @@ class Steps extends CI_Controller {
 			}
 		}
 		// Last minute Booking
-		$date1 = new DateTime($pick_up_date);
-		$date2 = new DateTime(date("m/d/Y h:i A"));
+		// $date1 = new DateTime($pick_up_date);
+		// $date2 = new DateTime(date("m/d/Y h:i A"));
+		$date1 = DateTime::createFromFormat('d/m/Y H:i', $pick_up_date);
+		$date2 = DateTime::createFromFormat('d/m/Y H:i', date('d/m/Y H:i'));
 		$diff = $date2->diff($date1);
 		$pickup_time = $diff->h;
 		$pickup_time = $pickup_time + ($diff->days*24);
@@ -258,6 +268,8 @@ class Steps extends CI_Controller {
 			if( isset($_saturdays) )
 				$total += $_saturdays;
 		}
+
+		$pick_up_time = date_format($date1, 'H');
 
 		// Night Booking
 		if( date('H',strtotime($pick_up_date)) > 6 && date('H',strtotime($pick_up_date)) < 18 ){
