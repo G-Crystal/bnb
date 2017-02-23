@@ -195,7 +195,7 @@ class Steps extends CI_Controller {
 		$postData = $this->input->post('dateTime');
 		$code = $this->address->address_postal_code;
 		$join = 'LEFT JOIN tbl_user_infos ON tbl_user_infos.user_id = tbl_users.user_id LEFT JOIN req_franchise_location ON req_franchise_location.id = tbl_user_infos.keeper_location LEFT JOIN tbl_keeper_availability ON tbl_keeper_availability.user_id = tbl_users.user_id';
-		$where = 'where user_access = 3 AND "'.$postData.'" BETWEEN av_start_time and av_end_time';
+		$where = 'where user_access = 3 AND DATE_FORMAT(STR_TO_DATE("'.$postData.'", "%d/%m/%Y %H:%i"), "%Y-%m-%d %H:%i") BETWEEN av_start_time and av_end_time';
 		$res = $this->helper_model->query_table('*','tbl_users',$where,'',$join);
 		//echo $this->db->last_query();
 		echo json_encode($res);
@@ -239,6 +239,10 @@ class Steps extends CI_Controller {
 				$total += $cleaning_price;
 			}
 		}
+
+		$total += ($client['number_of_beds'] - 1) * 10;
+		$total += ($client['number_of_bathrooms'] - 1) * 20;
+		
 		// Last minute Booking
 		// $date1 = new DateTime($pick_up_date);
 		// $date2 = new DateTime(date("m/d/Y h:i A"));
