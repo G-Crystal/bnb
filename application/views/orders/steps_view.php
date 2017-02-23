@@ -1222,35 +1222,6 @@
 				$key_set_date = $('#key_'+$key_set_val+'-form').serialize();
 				var form = $personal_info+'&'+$services+'&'+$keeper+'&'+$more_info+'&'+$key_set+'&'+$key_set_date+'&address='+$address+'&total='+$('#info_total').data('total');
 				$('.btn-next').prop('disabled',true);
-				/*$.ajax({
-					url: 'order/steps/addOrder',
-					data: form,
-					dataType: 'json',
-					type: 'post',
-					success: function(res){
-						var payer_data = JSON.stringify(res['data']);
-						if( res['success'] ){
-							var url = 'payments';
-							var v_form = $('<form action="' + url + '" method="post">' +
-							  '<input type="text" name="api_url" value="" />' +
-							  '</form>');
-							$('body').append(v_form);
-							$('input[name=api_url]').val(payer_data);
-							v_form.submit();
-						}else{
-							bootbox.dialog({
-								message: res, 
-								buttons: {
-									"success" : {
-										"label" : "OK",
-										"className" : "btn-sm btn-primary"
-									}
-								}
-							});
-							$('.btn-next').prop('disabled',false);
-						}
-					}
-				});*/
 				$.ajax({
 					type : 'post',
 					url  : 'order/steps/addOrder',
