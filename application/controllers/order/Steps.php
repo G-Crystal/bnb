@@ -276,7 +276,7 @@ class Steps extends CI_Controller {
 		$pick_up_time = date_format($date1, 'H');
 
 		// Night Booking
-		if( date('H',strtotime($pick_up_date)) > 6 && date('H',strtotime($pick_up_date)) < 18 ){
+		if( $pick_up_time > 6 && $pick_up_time < 18 ){
 			$_night_booking = $this->getService('Night Bookings',$services);
 			if( isset($_night_booking) )
 				$total += $_night_booking;
