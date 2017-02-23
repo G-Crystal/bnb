@@ -1,0 +1,52 @@
+/*  */
+@font-face {
+    font-family: 'texgyreadventorbold';
+    src: url('assets/texgyreadventor_bold_macroman/texgyreadventor-bold-webfont.eot');
+    src: url('assets/texgyreadventor_bold_macroman/texgyreadventor-bold-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('assets/texgyreadventor_bold_macroman/texgyreadventor-bold-webfont.woff') format('woff'),
+         url('assets/texgyreadventor_bold_macroman/texgyreadventor-bold-webfont.ttf') format('truetype'),
+         url('assets/texgyreadventor_bold_macroman/texgyreadventor-bold-webfont.svg#texgyreadventorbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*  */
+@font-face {
+    font-family: 'texgyreadventorbold_italic';
+    src: url('assets/texgyreadventor_bolditalic_macroman/texgyreadventor-bolditalic-webfont.eot');
+    src: url('assets/texgyreadventor_bolditalic_macroman/texgyreadventor-bolditalic-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('assets/texgyreadventor_bolditalic_macroman/texgyreadventor-bolditalic-webfont.woff') format('woff'),
+         url('assets/texgyreadventor_bolditalic_macroman/texgyreadventor-bolditalic-webfont.ttf') format('truetype'),
+         url('assets/texgyreadventor_bolditalic_macroman/texgyreadventor-bolditalic-webfont.svg#texgyreadventorbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* */
+@font-face {
+    font-family: 'texgyreadventoritalic';
+    src: url('assets/texgyreadventor_italic_macroman/texgyreadventor-italic-webfont.eot');
+    src: url('assets/texgyreadventor_italic_macroman/texgyreadventor-italic-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('assets/texgyreadventor_italic_macroman/texgyreadventor-italic-webfont.woff') format('woff'),
+         url('assets/texgyreadventor_italic_macroman/texgyreadventor-italic-webfont.ttf') format('truetype'),
+         url('assets/texgyreadventor_italic_macroman/texgyreadventor-italic-webfont.svg#texgyreadventoritalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/***/
+@font-face {
+    font-family: 'texgyreadventorregular';
+    src: url('assets/texgyreadventor_regular_macroman/texgyreadventor-regular-webfont.eot');
+    src: url('assets/texgyreadventor_regular_macroman/texgyreadventor-regular-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('assets/texgyreadventor_regular_macroman/texgyreadventor-regular-webfont.woff') format('woff'),
+         url('assets/texgyreadventor_regular_macroman/texgyreadventor-regular-webfont.ttf') format('truetype'),
+         url('assets/texgyreadventor_regular_macroman/texgyreadventor-regular-webfont.svg#texgyreadventorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

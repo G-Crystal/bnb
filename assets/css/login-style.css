@@ -1,0 +1,146 @@
+
+/* LOGIN CSS */
+.light-login{
+  background: none;
+  background-color: #1abc9c;
+  background-image: radial-gradient(circle farthest-side at center top , #55e7ca 0%, #1abc9c 100%);
+}
+
+.light-login-v{
+  background: none;
+  background-color: #9b59b6;
+  background-image: radial-gradient(circle farthest-side at center top , #c6a0d5 0%, #9b59b6 100%);
+}
+
+.light-login-b{
+  background: none;
+  background-color: #3498db;
+  background-image: radial-gradient(circle farthest-side at center top , #8bc4ea 0%, #3498db 100%);
+}
+
+.position-relative fieldset,
+.position-relative div.section-title,
+.position-relative div.toolbar,
+.position-relative div.registration-form-action{
+  background-color: white;
+}
+
+.login-form{
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.login-form .section-title {
+    padding: 20px 20px;
+}
+
+.textbox-wrap .ace-icon{
+  margin-left: 10px;
+}
+
+.textbox-wrap {
+  padding: 20px 20px 10px 20px;
+}
+
+.textbox-wrap.focused{
+  padding: 20px 20px 10px 15px;
+  background-color: #f0f0f0;
+  border-left: 5px solid #337ab7;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+  transition: border-left-color 0.5s ease 0s, box-shadow 0.5s ease 0s, background-color 0.5s ease 0s;
+}
+
+.textbox-wrap input{
+  padding-left: 45px;
+  padding-right: 15px;
+}
+
+.textbox-wrap input:focus,
+.textbox-wrap input:hover{
+  border: 1px solid #d5d5d5;
+}
+
+.forgot-form-action,
+.registration-form-action,
+.login-form-action{
+  padding: 15px 20px 5px;
+}
+
+.login-form-action .remember{
+  position: relative;
+  bottom: -15px;
+  margin: 0px;
+}
+
+.login-form div.t-info {
+  position: relative;
+  padding-left: 20px; 
+  padding-bottom: 5px;
+  background-color: white;
+}
+
+.login-container{
+  width: 360px;
+}
+
+.login-container .toolbar{
+  padding: 10px 20px;
+}
+
+.login-container .toolbar a{
+  color: #999;
+  font-size: 14px;
+}
+
+.a-box{
+  visibility: hidden;
+  background-color: transparent;
+  padding: 0px;
+}
+
+.a-box.visible{
+  visibility: visible;
+  background-color: transparent;
+  padding: 0px;
+}
+
+.help-block{
+  margin-bottom: -21px;
+  margin-top: 0px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+#aggrement-error{
+  margin-bottom: 10px;
+}
+
+#signup-box .first-field{
+  margin-right: 5px;
+}
+
+#signup-box{
+  width: 725px !important;
+}
+
+#signup-box fieldset.pull-left{
+  margin-right: 5px;
+}
+
+#signup-box fieldset{
+  width: 360px;
+}
+
+#signup-box .registration-form-action,
+#signup-box fieldset{
+  margin-top: 5px;
+}
+
+#signup-box fieldset{
+  padding-top: 15px;
+}
+
+
+#alert-msg{
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,4 @@
+[29-Jan-2017 15:55:50 Australia/Sydney] PHP Parse error:  syntax error, unexpected ';' in /home/designto/bnbkeepers.designtohtml.com.au/application/controllers/order/Steps.php on line 217
+[29-Jan-2017 15:56:48 Australia/Sydney] PHP Parse error:  syntax error, unexpected ';' in /home/designto/bnbkeepers.designtohtml.com.au/application/controllers/order/Steps.php on line 217
+[05-Feb-2017 00:20:55 Australia/Sydney] PHP Fatal error:  Call to undefined function getService() in /home/designto/bnbkeepers.designtohtml.com.au/application/views/orders/steps_view.php on line 347
+[05-Feb-2017 00:38:01 Australia/Sydney] PHP Fatal error:  Call to undefined function getService() in /home/designto/bnbkeepers.designtohtml.com.au/application/views/orders/steps_view.php on line 347

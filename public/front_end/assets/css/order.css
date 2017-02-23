@@ -1,0 +1,650 @@
+/*
+ * 	Order Style
+ */
+
+/*	Table of Content
+========================
+	* 
+========================
+*/
+
+.required-star {
+	color: #e74c3c;
+	display: inline-flex;
+	font-size: 2em;
+	line-height: 0;
+	padding: 0 0 0 3px;
+	position: relative;
+}
+
+/* 	==========================================================================
+	Layout
+	========================================================================== */
+	.order-wrapper{
+		position: relative;
+		height: 100%;
+		font-family: 'Raleway', sans-serif;
+	}
+	/* 	=================== Order Header =================== */
+		.order-header{
+			background: #E8E8E8;
+			/*height: 100vh;*/
+			height: 100%;
+			left: 0;
+			position: fixed;
+			top: 0;
+			width: 130px;
+			z-index: 170;
+		}
+		.order-logo{
+			margin-top: 10px;
+		}
+		/* Order Step */
+		.order-step-wrapper {
+			display: table;
+			height: 100%;
+			padding: 8px;
+			width: 100%;
+		}
+		ul.order-step {
+			display: table-cell;
+			vertical-align: middle;
+			padding-left: 0;
+			text-align: center;
+		}
+		ul.order-step li {
+			margin-top: 15px;
+			position: relative;
+		}
+		ul.order-step .order-step-text {
+			font-size: 10px;
+			margin-top: 10px;
+		}
+		.order-step-text {
+			color: #0070BA;
+			font-size: 12px;
+			font-weight: bold;
+			margin-top: 0;
+			text-transform: uppercase;
+		}
+		
+		/* Order Circle */
+		.circle span {
+			font-size: 30px;
+			font-weight: 300;
+			left: 41%;
+			position: absolute;
+			text-align: center;
+		}
+	/* 	=================== Order Sidebar =================== */
+		.order-sidebar {
+			box-shadow: 5px 0 0 rgba(0, 0, 0, 0.1) inset;
+			background: #0070BA;
+			color: #fff;
+			display: block;
+			height: 100%;
+			overflow-y: auto;
+			padding-top: 0;
+			position: fixed;
+			right: 0;
+			text-align: center;
+			top: 0;
+			width: 260px;
+			z-index: 120;
+			padding: 15px ;
+		}
+			.sidebar-title {
+				font-size: 1em;
+				font-weight: bold;
+				margin-bottom: 0;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			.sidebar-title::after {
+				background: #000 none repeat scroll 0 0;
+				content: "";
+				display: block;
+				height: 3px;
+				margin: 1em auto;
+				width: 3em;
+			}
+			
+			.sidebar-category {
+				font-size: 0.9em;
+				font-weight: 400;
+				margin: 0;
+				padding-bottom: 0.5em;
+				text-transform: uppercase;
+				text-align: left;
+			}
+			.sidebar-info {
+				background: rgba(255, 255, 255, 0.15) none repeat scroll 0 0;
+				border: 1px solid transparent;
+				font-weight: 300;
+				padding: 0.5em 1em;
+				text-align: left;
+				transition: all 0.3s ease-in-out 0s;
+			}
+			.sidebar-info:hover {
+				background:  #0070BA;
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				cursor: pointer;
+			}
+			.sidebar-info p{
+				margin-bottom: 0;
+			}
+			.sidebar-info a {
+				border-bottom: 1px dashed transparent;
+				font-size: 0.9em;
+				color: #fff;
+				padding-bottom: 1px;
+				transition: all 0.2s ease 0s;
+			}
+			.sidebar-info a:hover {
+				border-bottom: 1px dashed #fff;
+				text-decoration: none;
+			}
+
+			/* Sidebar Total */
+			.sidebar-total {
+				bottom: 0;
+				padding: 1em 0em;
+				position: relative;
+				right: 0;
+				width: 100%;
+			}
+			.sidebar-total-inner {
+				border-bottom: 1px dashed #fff;
+				border-top: 1px dashed #fff;
+				margin-bottom: 0em;
+				padding: 1em;
+			}
+			.sidebar-total-title {
+				font-size: 1.1em;
+				margin: 0;
+				text-transform: uppercase;
+				vertical-align: bottom;
+				text-align: left;
+			}
+			.sidebar-total-amount {
+				font-size: 1.1em;
+				vertical-align: bottom;
+				text-align: right;
+				float: right;
+			}
+	/* 	=================== Order Content =================== */
+		.order-content{
+			background: #fff;
+			padding: 25px;
+			overflow: hidden;
+			max-width: 1170px;
+			margin: 0 auto;
+			/*margin-left: -25px;*/
+		}
+
+			/* Section Dashboard */
+			.section-dashboard {
+				text-align: center;
+			}
+			.section-title {
+				color: #000 !important;
+				font-size: 20px;
+				font-weight: bold;
+				margin-bottom: 10px;
+				text-align: center;
+			}
+			.section-baseline {
+				color: #767676;
+				font-size: .9em;
+				font-weight: 300;
+				margin-bottom: 1rem;
+				margin-top: 0;
+				text-align: center;
+			}
+
+			/* =================== Housing List (Step 1) =================== */
+			.housing-list-item {
+				border: 2px solid #0070BA;
+				color: #0070BA;
+				cursor: pointer;
+				display: block;
+				font-weight: 700;
+				margin-bottom: 20px;
+				padding: 1.5em 1em;
+				text-align: center;
+				transition: all 0.3s ease 0s;
+			}
+			.housing-list-item:hover {
+				background: #0070BA;
+				color: #fff;
+			}
+
+			/* =================== Package List (Step 2) =================== */
+			button:focus {outline:0;}
+			.package-item {
+				border: 1px solid #0070BA;
+				cursor: pointer;
+				height: 250px;
+				margin: 3em auto;
+				position: relative;
+				text-align: center;
+				transition: all 0.2s ease-in-out 0s;
+			}
+			.package-item-inner {
+				height: 248px;
+				background: #fff;
+				position: relative;
+				width: 100%;
+				z-index: 1000000;
+				margin: 0;
+				padding: 0;
+				box-shadow: none;
+			}
+			.package-item.selected{
+				background: #0070BA;
+			}
+			.package-item.selected .package-item-inner{
+				background: #0070BA;
+			}
+			
+			.package-item.selected .package-item-icon{
+				/*outline: 4px solid transparent;*/
+				box-shadow: none;
+			}
+			.package-item.selected .package-item-title{
+				color: #fff;
+			}
+			.package-item.selected .package-item-title::after, 
+			.package-item.selected .package-item-price p::after {
+				background: #fff;
+			}
+			.package-item-icon {
+				background: #fff none repeat scroll 0 0;
+				border: 1px solid #0070BA;
+				border-radius: 50%;
+				display: inline-block;
+				font-size: 3em;
+				height: 80px;
+				/*outline: 4px solid white;*/
+				padding: 5px;
+				position: relative;
+				transform: translateY(-50%);
+				width: 80px;
+				z-index: 3;
+				color: #0070BA;
+				box-shadow: none;
+			}
+			.package-item-inner .package-item-icon{
+				top: -65px;
+			}
+
+			.package-item-icon .icon{
+				margin-bottom: 0;
+				margin-top: 0;
+				width: 100%;
+			}
+			.package-item-content {
+				padding: 0 0 1em;
+			}
+			.package-item-content strong {
+			    color: #26292e;
+			    font-weight: 400;
+			}
+			.package-item-title::after, 
+			.package-item-price p::after {
+				background: #000 none repeat scroll 0 0;
+				content: "";
+				display: block;
+				height: 4px;
+				margin: 1em auto;
+				width: 60px;
+			}
+			.package-item-title, 
+			.package-item-price p {
+				font-size:1.2em ;
+				font-weight: 400;
+				padding: 0 5px;
+				margin-top: -60px;
+			}
+			.package-item-info {
+				background: #0070BA none repeat scroll 0 0;
+				color: white;
+				font-size: 0.7em;
+				height: 100%;
+				left: 0;
+				opacity: 0;
+				padding: 50px 1em 1em;
+				position: absolute;
+				text-align: left;
+				top: 0;
+				transform: scale(0.8);
+				transition: all 0.5s ease 0s;
+				width: 100%;
+				z-index: 2;
+			}
+			.package-item-info li {
+				margin-bottom: 5px;
+				text-align: left;
+			}
+			.package-item-selected .package-item-push {
+				background: #000 none repeat scroll 0 0;
+				color: #0070BA;
+				text-decoration: none;
+			}
+			.package-item-push {
+				background: #0070BA none repeat scroll 0 0;
+				border: none;
+				bottom: 0;
+				color: white;
+				display: block;
+				padding: 1.5em;
+				position: absolute;
+				text-align: center;
+				width: 100%;
+				margin-bottom: 0;
+			}
+			.package-push-info::after {
+				border-color: transparent #f6f6f6 transparent transparent;
+				border-style: solid;
+				border-width: 0 30px 30px 0;
+				content: "";
+				height: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				transition: all 0.5s ease 0s;
+				width: 0;
+				z-index: -1;
+			}
+			.package-push-info {
+				background: transparent none repeat scroll 0 0;
+				border: medium none;
+				color: #0070BA;
+				font-size: 0.7em;
+				height: 1em;
+				outline: medium none;
+				position: absolute;
+				right: 0;
+				top: 0;
+				transition: all 0.5s ease 0s;
+				width: 1.5em;
+				z-index: 2;
+			}
+			.key-set .package-item-title, 
+			.key-set .package-item-price p {
+				margin-top: 0px;
+			}
+			.key-set .package-item-icon {
+				padding: 14px;
+			}
+			
+			/* =================== Event Calendar (Step 3) =================== */
+
+			/* =================== Package List (Step 4) =================== */
+
+			/* =================== (Step 5) =================== */
+
+			/* =================== (Step 6) =================== */
+
+			/*.bnbkeeper-compact-item {
+				height: 440px;
+				margin: 1.5em auto;
+				padding: 0;
+			}*/
+			.bnbkeeper-compact-item {
+				background: #fff none repeat scroll 0 0;
+				border: 1px solid #a5a5a5;
+				margin: 3em auto;
+				padding: 0 !important;
+				text-align: center;
+				transition: all 0.3s ease 0s;
+				width: 100%;
+				min-height: 470px; 
+				position: relative;
+				overflow: hidden;
+			}
+			.bnbkeeper-compact-item.selected {
+				background: #0070BA;
+				color: #fff;
+			}
+			.bnbkeeper-compact-item.selected .bnbkeeper-item-name,
+			.bnbkeeper-compact-item.selected .bnbkeeper-item-note,
+			.bnbkeeper-compact-item.selected .bnbkeeper-item-quotes{
+				color: #fff;
+			}
+			.bnbkeeper-item-inner {
+				/*padding: 0.5em 1em;
+				position: relative;*/
+			}
+			.bnbkeeper-item-header {
+				height: 260px;
+				margin: 0 auto;
+				padding-top: 15px;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+			.bnbkeeper-item-avatar {
+				border-radius: 50%;
+				display: inline-block;
+				height: 135px;
+				margin-top: 10px;
+				position: relative;
+				width: 135px;
+				margin-bottom: 25px;
+			}
+			.bnbkeeper-item-avatar img{
+				border-radius: 50%;
+				width: 100%;
+				height: 100%;
+			}
+			.bnbkeeper-item-name {
+				color: #000;
+				display: block;
+				font-weight: 700;
+				font-size: 1.5em;
+				margin-bottom: 0.5em;
+			}
+			.bnbkeeper-item-note {
+				color: red !important;
+				font-size: 15.6px;
+			}
+			.bnbkeeper-item-note img {
+				height: 14px;
+				margin-left: 3px;
+				margin-top: 3.5px;
+				position: absolute;
+				width: auto;
+			}
+			.bnbkeeper-item-quotes {
+				color: #767676;
+				font-size: 0.75em;
+				font-weight: 400;
+				margin-bottom: 20px;
+				margin-top: 10px;
+			}
+			.bnbkeeper-item-lang {
+				font-weight: 300;
+				text-align: left;
+			}
+			.sitters-item-lang.step {
+				bottom: 0;
+				padding: 15px;
+				position: absolute;
+				width: 100%;
+			}
+			.sitters-item-lang .list-group-item span {
+				color: #000;
+			}
+/* 	==========================================================================
+	Order Header Mobile
+	========================================================================== */
+	.order-mobile-header{
+		background: #E8E8E8;
+		padding: 10px 0;
+		top: 0;
+		margin-bottom: 10px;
+		width: 100%;
+		z-index: 99999;
+	}
+	.btn-mobile i{
+		font-size: 24px;
+		color: #0070BA;
+		margin-top: 5px;
+	}
+
+/* 	==========================================================================
+	Order Sidebar
+	========================================================================== */
+	.sidebar.left {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    /*
+	    width: 270px;
+	    */
+	   width: auto;
+	    background: #E8E8E8;
+	}
+
+	.sidebar.right {
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    width: 270px;
+	    background: #0070BA;
+	}
+
+	.sidebars > .sidebar {
+	    box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);
+	    position: fixed;
+	    color: white;
+	    padding: 15px;
+	    z-index: 1000;
+	}
+
+/* 	==========================================================================
+	Order Step 3 Calendar
+	========================================================================== */
+	
+	/* Global Calendar style */
+	.xdsoft_datetimepicker{
+		font-family: "Raleway",sans-serif !important;
+		z-index: 10000 !important;
+	}
+	.xdsoft_datetimepicker .xdsoft_calendar th {
+		background: #0070ba !important;
+		color: #fff !important;
+	}
+
+	/* style for inline calendar */
+	.xdsoft_datetimepicker.xdsoft_inline {
+	    width: 100%;
+	}
+	.xdsoft_datetimepicker.xdsoft_inline .xdsoft_datepicker {
+	    width: 84%;
+	    margin-left: 1%;
+	}
+	.xdsoft_datetimepicker.xdsoft_inline .xdsoft_datepicker.active+.xdsoft_timepicker {
+	    width: 14%;
+	}
+	.xdsoft_datetimepicker.xdsoft_inline .xdsoft_timepicker {
+	    margin-left: 1%;
+
+	}
+	.xdsoft_datetimepicker.xdsoft_inline .xdsoft_calendar td, 
+	.xdsoft_datetimepicker.xdsoft_inline .xdsoft_calendar th {
+		height: 80px;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 600;
+	}
+	.xdsoft_datetimepicker.xdsoft_inline .xdsoft_timepicker .xdsoft_time_box {
+	    height: 520px;
+	}
+	.xdsoft_datetimepicker.xdsoft_inline .xdsoft_timepicker .xdsoft_time_box > div > div {
+	    font-size: 16px;
+	    font-weight: 600;
+	}
+/* 	==========================================================================
+	Responsive Style
+	========================================================================== */
+
+	/* Large Devices, Wide Screens */
+	@media only screen and (max-width : 1200px) {
+
+	}
+
+	/* Medium Devices, Desktops */
+	@media only screen and (max-width : 992px) {
+		
+	}
+
+	/* Small Devices, Tablets */
+	@media only screen and (max-width : 768px) {
+		.order-sidebar {
+			position: relative;
+			top: 30px;
+			width: 100%;
+			bottom: 30px;
+		}
+		
+	}
+
+	/* Extra Small Devices, Phones */ 
+	@media only screen and (max-width : 480px) {
+		.order-sidebar {
+			position: relative;
+			top: 30px;
+			width: 100%;
+			bottom: 30px;
+		}
+
+		.xdsoft_datetimepicker.xdsoft_inline .xdsoft_datepicker {
+		    width: 100%;
+		    margin: 1%;
+		}
+		.xdsoft_datetimepicker.xdsoft_inline .xdsoft_datepicker.active+.xdsoft_timepicker {
+		    width: 100%;
+		}
+		.xdsoft_datetimepicker.xdsoft_inline .xdsoft_timepicker .xdsoft_time_box {
+		    height: 200px;
+		}
+		.xdsoft_datetimepicker.xdsoft_inline .xdsoft_calendar td, 
+		.xdsoft_datetimepicker.xdsoft_inline .xdsoft_calendar th {
+		    height: 50px;
+		    font-size: 16px;
+		    font-weight: 600;
+		}
+		
+	}
+
+	/* Custom, iPhone Retina */ 
+	@media only screen and (max-width : 320px) {
+		.order-sidebar {
+			position: relative;
+			top: 30px;
+			width: 100%;
+			bottom: 30px;
+		}
+		
+		.xdsoft_datetimepicker.xdsoft_inline .xdsoft_datepicker {
+		    width: 100%;
+		    margin: 1%;
+		}
+		.xdsoft_datetimepicker.xdsoft_inline .xdsoft_datepicker.active+.xdsoft_timepicker {
+		    width: 100%;
+		}
+		.xdsoft_datetimepicker.xdsoft_inline .xdsoft_timepicker .xdsoft_time_box {
+		    height: 200px;
+		}
+		.xdsoft_datetimepicker.xdsoft_inline .xdsoft_calendar td, 
+		.xdsoft_datetimepicker.xdsoft_inline .xdsoft_calendar th {
+		    height: 50px;
+		    font-size: 16px;
+		    font-weight: 600;
+		}
+	}
+
+

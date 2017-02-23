@@ -1,0 +1,803 @@
+/*
+ * 	Responsive Style
+ */
+
+/*	Table of Content
+========================
+	# 
+========================
+*/
+
+/* 	==========================================================================
+	Large desktops and laptops
+	========================================================================== */
+	@media (min-width: 1600px){ 
+		.remodal {
+			top: -60px !important;
+		}
+	}
+
+
+/* 	==========================================================================
+	Large desktops and laptops
+	========================================================================== */
+	@media (min-width: 1366px) and (max-width: 1599px){ 
+		.remodal {
+			top: 80px !important;
+		}
+	}
+
+/* 	==========================================================================
+	Large desktops and laptops
+	========================================================================== */
+	@media (min-width: 1200px) and (max-width: 1365px){ 
+		
+	}
+/* 	==========================================================================
+	Portrait tablets and medium desktops
+	========================================================================== */
+	@media (min-width: 992px) and (max-width: 1199px) { 
+	}
+/* 	==========================================================================
+	Portrait tablets and small desktops
+	========================================================================== */
+	@media (min-width: 768px) and (max-width: 991px) { 
+		/* 	=================== Header Style =================== */
+			.col-centered-sm{
+				float: none !important;
+				margin: 0 auto !important;
+			}
+			.order-sidebar{
+				width: 75%;
+				margin: 0 auto;
+				display: block;
+				position: relative;
+				margin-top: 30px;
+			}
+			/* Logo */
+			.main-logo {
+				width: 75px;
+			}
+			.header-moto {
+				font-size: 1.5em;
+				top: 9px;
+			}
+			.menu-button {
+				left: 85%;
+			}
+			.header-right-info {
+				margin-bottom: 10px;
+				margin-top: -10px;
+				text-align: center;
+			}
+			.nav-logo{
+				width: 80%;
+				float: left;
+			}
+			.mobile-menu-right {
+				width: 15%;
+				float: right;
+			}
+		/* 	=================== Footer Style =================== */
+			
+		/* 	=================== Home Page =================== */
+			/* Home banner */
+			.home-banner {
+				background-position: center center;
+				background-size: cover;
+				margin-top: 20px;
+				min-height: 450px;
+			}
+			.baseline h1 {
+				font-size: 2em;
+				line-height: 40px;
+			}
+			.form-home {
+				padding: 10px;
+				text-align: center;
+			}
+			.form-home .form-inline .form-group .input-group input {
+				width: 100%;
+			}
+
+			/* Home presentation */
+			.service-icon-box-title {
+				margin-top: 0;
+			}
+			.service-icon-box.last {
+				position: relative;
+				top: 0;
+			}
+			.service-icon-box .icon{
+				width: 40%;
+			}
+			.home-service-center{
+				width: 100%;
+				margin-top: 0;
+			}
+			.home-services-box .icon{
+				width: 38%;
+			}
+
+			/* Order Form */
+			.form-ct-action .form-inline .form-group .input-group input {
+				height: 59px;
+				width: 100%;
+			}
+
+			/* Home Feature  */
+			.feature-item {
+				height: 594px;
+				margin-bottom: 0 !important;
+				width: 100%;
+			}
+			.feature-item-img {
+				height: 294px;
+				width: 100%;
+			}
+			.feature-item-content {
+				height: 300px;
+				padding: 0 30px 30px 30px;
+				position: relative !important;
+			}
+			.btn-white-gray {
+				padding: 10px 20px;
+			}
+		/* 	=================== Discover Our Services =================== */
+			/* Page Banner */
+			.page-content.left {
+				left: 0%;
+				top: 55%;
+				width: 100%;
+			}
+			.baseline.center {
+			    width: 60% !important;
+			}
+			/**/
+			.price-item {
+				height: 694px;
+				margin-bottom: 30px !important;
+				width: 100%;
+			}
+			.price-item-img {
+				height: 294px;
+				width: 100%;
+			}
+			.price-item-content {
+				height: 370px;
+				padding: 15px;
+				position: relative !important;
+			}
+			.price-item-img.alt {
+				position: relative !important;
+				height: 294px;
+			}
+			.price-item-content.alt {
+				height: 370px;
+				padding: 15px;
+			}
+		/* 	=================== Discover Our Keepers =================== */
+			.sitters-list .sitters-item {
+				margin: 1em auto;
+			}
+			.sitters-item-lang {
+				bottom: 0;
+				position: relative;
+				width: 100%;
+			}
+		/* 	=================== How Does It Work =================== */
+			.step-arrow-1 ,
+			.step-arrow-2 ,
+			.step-arrow-3 ,
+			.step-arrow-4{
+				display: none;
+			}
+
+			.work-step-box {
+				margin: 0 auto 40px;
+				max-width: 450px;
+			}
+		/* Remodal */
+			.remodal {
+				top: 125px;
+			}
+		/* Top Banner */
+			.page-banner{
+				/*min-height: 480px;*/
+			}
+			.page-banner .baseline{
+				margin-top: 0 !important;
+			}
+			.banner-discover-our-services{
+				background-position: 80%;
+			}
+			.banner-discover-our-keepers{
+				background-position: 80%;
+			}
+			.banner-hdiw{
+				background-position: 80%;
+			}
+			.banner-faq{
+				background-position: 80%;
+			}
+			.banner-guest{
+				background-position: 80%;
+			}
+			.banner-become-keeper{
+				background-position: 80%;
+			}
+			.banner-media{
+				background-position: 80%;
+			}
+			.banner-terms{
+				background-position: 41%;
+			}
+			.banner-apply-keeper{
+				background-position: 80%;
+			}
+	}
+/* 	==========================================================================
+	Landscape phone to portrait tablet
+	========================================================================== */
+	@media (max-width: 767px) {
+		/* 	=================== Header Style =================== */
+			/* Logo */
+			.main-logo {
+				width: 75px;
+			}
+			.header-moto {
+				font-size: 1.5em;
+				top: 9px;
+			}
+			.menu-button {
+				left: 85%;
+			}
+			.header-right-info {
+				margin-bottom: 10px;
+				margin-top: -10px;
+				text-align: center;
+			}
+			.nav-logo{
+				width: 80%;
+				float: left;
+			}
+			.mobile-menu-right {
+				width: 15%;
+				float: right;
+			}
+		/* 	=================== Footer Style =================== */
+			
+		/* 	=================== Home Page =================== */
+			/* Home banner */
+			.home-banner {
+				background-position: center center;
+				background-size: cover;
+				margin-top: 80px;
+				min-height: 450px;
+			}
+			.baseline h1 {
+				font-size: 2em;
+				line-height: 40px;
+			}
+			.form-home {
+				padding: 10px;
+				text-align: center;
+			}
+			.form-home .form-inline .form-group .input-group input {
+				width: 100%;
+			}
+
+			/* Home presentation */
+			.service-icon-box-title {
+				margin-top: 0;
+			}
+			.service-icon-box.last {
+				position: relative;
+				top: 0;
+			}
+			.service-icon-box .icon{
+				width: 40%;
+			}
+
+			.home-service-center{
+				width: 100%;
+				margin-top: 0;
+			}
+
+			/* Order Form */
+			.form-ct-action .form-inline .form-group .input-group input {
+				height: 59px;
+				width: 100%;
+			}
+
+			/* Home Feature  */
+			.feature-item {
+				height: 594px;
+				margin-bottom: 0 !important;
+				width: 100%;
+			}
+			.feature-item-img {
+				height: 294px;
+				width: 100%;
+			}
+			.feature-item-content {
+				height: 300px;
+				padding: 0 30px 30px 30px;
+				position: relative !important;
+			}
+			.btn-white-gray {
+				padding: 10px 20px;
+			}
+		/* 	=================== Discover Our Services =================== */
+			/* Page Banner */
+			.page-content.left {
+				left: 0%;
+				top: 55%;
+				width: 100%;
+			}
+			.baseline.center {
+			    width: 60% !important;
+			}
+			/**/
+			.price-item {
+				height: 694px;
+				margin-bottom: 30px !important;
+				width: 100%;
+			}
+			.price-item-img {
+				height: 294px;
+				width: 100%;
+			}
+			.price-item-content {
+				height: 370px;
+				padding: 15px;
+				position: relative !important;
+			}
+			.price-item-img.alt {
+				position: relative !important;
+				height: 294px;
+			}
+			.price-item-content.alt {
+				height: 370px;
+				padding: 15px;
+			}
+		/* 	=================== Discover Our Keepers =================== */
+			.sitters-list .sitters-item {
+				margin: 1em auto;
+			}
+			.sitters-item-lang {
+				bottom: 0;
+				position: relative;
+				width: 100%;
+			}
+		/* 	=================== How Does It Work =================== */
+			.step-arrow-1 ,
+			.step-arrow-2 ,
+			.step-arrow-3 ,
+			.step-arrow-4{
+				display: none;
+			}
+			.work-step-box {
+				margin-bottom: 40px;
+			}
+			/* Remodal */
+			.remodal {
+				top: 125px;
+			}
+			
+			/* Top Banner */
+			.page-banner{
+				/*min-height: 480px;*/
+			}
+			.page-banner .baseline{
+				margin-top: 0 !important;
+			}
+			.banner-discover-our-services{
+				background-position: 80%;
+			}
+			.banner-discover-our-keepers{
+				background-position: 80%;
+			}
+			.banner-hdiw{
+				background-position: 80%;
+			}
+			.banner-faq{
+				background-position: 80%;
+			}
+			.banner-guest{
+				background-position: 80%;
+			}
+			.banner-become-keeper{
+				background-position: 80%;
+			}
+			.banner-media{
+				background-position: 80%;
+			}
+			.banner-terms{
+				background-position: 80%;
+			}
+			.banner-apply-keeper{
+				background-position: 80%;
+			}
+
+	}
+/* 	==========================================================================
+	Landscape phones 
+	========================================================================== */
+	@media (max-width: 480px) {
+		/* 	=================== Header Style =================== */
+			/* Logo */
+			.main-logo {
+				width: 75px;
+			}
+			.header-moto {
+				font-size: 1.5em;
+				top: 9px;
+			}
+			.menu-button {
+				left: 75%;
+			}
+			.header-right-info {
+				margin-bottom: 10px;
+				margin-top: -10px;
+				text-align: center;
+			}
+			.nav-logo{
+				width: 80%;
+				float: left;
+			}
+			.mobile-menu-right {
+				width: 15%;
+				float: right;
+			}
+		/* 	=================== Footer Style =================== */
+			
+		/* 	=================== Home Page =================== */
+			/* Home banner */
+			.home-banner {
+				background-position: center center;
+				background-size: cover;
+				margin-top: 80px;
+				min-height: 450px;
+			}
+			.baseline h1 {
+				font-size: 2em;
+				line-height: 40px;
+			}
+			.form-home {
+				padding: 10px;
+				text-align: center;
+			}
+			.form-home .form-inline .form-group .input-group input {
+				width: 100%;
+			}
+
+			/* Home presentation */
+			.service-icon-box.last {
+				position: relative;
+				top: 0;
+			}
+			.home-service-center{
+				width: 100%;
+				margin-top: 0;
+			}
+
+			/* Order Form */
+			.form-ct-action .form-inline .form-group .input-group input {
+				height: 59px;
+				width: 100%;
+			}
+
+			/* Home Feature  */
+			.feature-item {
+				height: 594px;
+				margin-bottom: 0 !important;
+				width: 100%;
+			}
+			.feature-item-img {
+				height: 194px;
+				width: 100%;
+			}
+			.feature-item-content {
+				height: 400px;
+				padding: 0 30px 30px 30px;
+				position: relative !important;
+			}
+			.btn-white-gray {
+				padding: 10px 20px;
+			}
+		/* 	=================== Discover Our Services =================== */
+			/* Page Banner */
+			.page-content.left {
+				left: 0%;
+				top: 35%;
+				width: 100%;
+				transition: translateX(0%) translateY(0%) !important ;
+			}
+			.baseline.center {
+			    width: 100% !important;
+			}
+			/**/
+			.price-item {
+				height: 694px;
+				margin-bottom: 30px !important;
+				width: 100%;
+			}
+			.price-item-img {
+				height: 194px;
+				width: 100%;
+			}
+			.price-item-content {
+				height: 470px;
+				padding: 15px;
+				position: relative !important;
+			}
+			.price-item-img.alt {
+				position: relative !important;
+				height: 194px;
+			}
+			.price-item-content.alt {
+				height: 470px;
+				padding: 15px;
+			}
+		/* 	=================== Discover Our Keepers =================== */
+			.sitters-list .sitters-item {
+				margin: 1em auto;
+			}
+			.sitters-item-lang {
+				bottom: 0;
+				position: relative;
+				width: 100%;
+			}
+		/* 	=================== How Does It Work =================== */
+			.step-arrow-1 ,
+			.step-arrow-2 ,
+			.step-arrow-3 ,
+			.step-arrow-4{
+				display: none;
+			}
+			.work-step-box {
+				margin-bottom: 40px;
+			}
+
+			/* Remodal */
+			.remodal {
+				top: 125px;
+			}
+			
+			/* Top Banner */
+			.page-banner{
+				/*min-height: 480px;*/
+			}
+			.page-banner .baseline{
+				margin-top: 0 !important;
+			}
+			.banner-discover-our-services{
+				background-position: 80%;
+			}
+			.banner-discover-our-keepers{
+				background-position: 80%;
+			}
+			.banner-hdiw{
+				background-position: 80%;
+			}
+			.banner-faq{
+				background-position: 80%;
+			}
+			.banner-guest{
+				background-position: 80%;
+			}
+			.banner-become-keeper{
+				background-position: 80%;
+			}
+			.banner-media{
+				background-position: 80%;
+			}
+			.banner-terms{
+				background-position: 80%;
+			}
+			.banner-apply-keeper{
+				background-position: 80%;
+			}
+
+
+	}
+/* 	==========================================================================
+	Portrait Mobile
+	========================================================================== */
+	@media (max-width: 320px) {
+		/* 	=================== Header Style =================== */
+			/* Logo */
+			.main-logo {
+				width: 75px;
+			}
+			.header-moto {
+				font-size: 1.5em;
+				top: 9px;
+			}
+			.menu-button {
+				left: 75%;
+			}
+			.header-right-info {
+				margin-bottom: 10px;
+				margin-top: -10px;
+				text-align: center;
+			}
+			.nav-logo{
+				width: 80%;
+				float: left;
+			}
+			.mobile-menu-right {
+				width: 15%;
+				float: right;
+			}
+		/* 	=================== Footer Style =================== */
+			
+		/* 	=================== Home Page =================== */
+			/* Home banner */
+			.home-banner {
+				background-position: center center;
+				background-size: cover;
+				margin-top: 80px;
+				min-height: 450px;
+			}
+			.baseline h1 {
+				font-size: 2em;
+				line-height: 40px;
+			}
+			.form-home {
+				padding: 10px;
+				text-align: center;
+			}
+			.form-home .form-inline .form-group .input-group input {
+				width: 100%;
+			}
+
+			/* Home presentation */
+			.service-icon-box.last {
+				position: relative;
+				top: 0;
+			}
+			.home-service-center{
+				width: 100%;
+				margin-top: 0;
+			}
+			/* Order Form */
+			.form-ct-action .form-inline .form-group .input-group input {
+				height: 59px;
+				width: 100%;
+			}
+
+			/* Home Feature  */
+			.feature-item {
+				height: 594px;
+				margin-bottom: 0 !important;
+				width: 100%;
+			}
+			.feature-item-img {
+				height: 194px;
+				width: 100%;
+			}
+			.feature-item-content {
+				height: 400px;
+				padding: 0 30px 30px 30px;
+				position: relative !important;
+			}
+			.btn-white-gray {
+				padding: 10px 20px;
+			}
+		/* 	=================== Discover Our Services =================== */
+			/* Page Banner */
+			.page-content.left {
+				left: 0%;
+				top: 35%;
+				width: 100%;
+				transition: translateX(0%) translateY(-50%) !important;
+			}
+			/**/
+			.price-item {
+				height: 694px;
+				margin-bottom: 30px !important;
+				width: 100%;
+			}
+			.price-item-img {
+				height: 194px;
+				width: 100%;
+			}
+			.price-item-content {
+				height: 470px;
+				padding: 15px;
+				position: relative !important;
+			}
+			.price-item-img.alt {
+				position: relative !important;
+				height: 194px;
+			}
+			.price-item-content.alt {
+				height: 470px;
+				padding: 15px;
+			}
+		/* 	=================== Discover Our Keepers =================== */
+			.sitters-list .sitters-item {
+				margin: 1em auto;
+			}
+			.sitters-item-lang {
+				bottom: 0;
+				position: relative;
+				width: 100%;
+			}
+		/* 	=================== How Does It Work =================== */
+			.step-arrow-1 ,
+			.step-arrow-2 ,
+			.step-arrow-3 ,
+			.step-arrow-4{
+				display: none;
+			}
+			.work-step-box {
+				margin-bottom: 40px;
+			}
+		/* 	=================== Become Keeper =================== */
+			.baseline.center {
+				position: relative; top: 0 !important; 
+				width: 100% !important;
+			}
+		
+			/* Remodal */
+			.remodal {
+				top: 125px;
+			}
+
+			/* Top Banner */
+			.page-banner{
+				/*min-height: 480px;*/
+			}
+			.page-banner .baseline{
+				margin-top: 0 !important;
+			}
+			.banner-discover-our-services{
+				background-position: 80%;
+			}
+			.banner-discover-our-keepers{
+				background-position: 80%;
+			}
+			.banner-hdiw{
+				background-position: 80%;
+			}
+			.banner-faq{
+				background-position: 80%;
+			}
+			.banner-guest{
+				background-position: 80%;
+			}
+			.banner-become-keeper{
+				background-position: 80%;
+			}
+			.banner-media{
+				background-position: 80%;
+			}
+			.banner-terms{
+				background-position: 80%;
+			}
+			.banner-apply-keeper{
+				background-position: 80%;
+			}
+
+			/* Safari 6.1+ (9.0 is the latest version of Safari at this time) */
+
+			@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) 
+			{ @media {
+				#nav-trigger {
+					display: block !important;
+				}
+				.mobile-menu-right{
+					top: 0 !important;
+				}
+			}}	
+	}
+/* 	==========================================================================
+	Mobile
+	========================================================================== */
+	@media (min-width: 240px) and  (max-width: 319px){
+	
+	}
+	
