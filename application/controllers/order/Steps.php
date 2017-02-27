@@ -19,6 +19,7 @@ class Steps extends CI_Controller {
 	{
 		parent::__construct();
 		$this->address = json_decode($_COOKIE['address']);
+		date_default_timezone_set('Australia/Sydney');
 	}
 
 	public function index()
@@ -48,6 +49,15 @@ class Steps extends CI_Controller {
 		return $this->helper_model->query_table("*","tbl_users tu","WHERE tu.user_id = '$id'",'row',$join);
 	}
 
+	public function convert_datetime($datetime)
+	{
+		$svc_dt = explode(' ', $datetime);
+		$svc_d = explode('/', $svc_dt[0]);
+		$svc_t = explode(':', $svc_dt[1]);
+		$str = $svc_d[2].'-'.$svc_d[1].'-'.$svc_d[0].' '.$svc_t[0].':'.$svc_t[1];
+		return date('Y-m-d H:i:s', strtotime($svc_d[2].'-'.$svc_d[1].'-'.$svc_d[0].' '.$svc_dt[1]));
+	}
+
 	public function addOrder(){
 		$flag = true;
 		$res_msg = '';
@@ -55,7 +65,7 @@ class Steps extends CI_Controller {
 
 		$server_total = $this->calculatePayment($formData);
 		$client_total = $formData['total'];
-		
+	
 		$n_server_total = number_format((float)trim($server_total), 2, '.', '');
 		$n_client_total = number_format((float)trim($client_total), 2, '.', '');
 		
@@ -72,9 +82,9 @@ class Steps extends CI_Controller {
 		// Modify and filter inputs
 		// $formData['pick_up_date'] = date('Y-m-d H:i:s',strtotime($formData['pick_up_date'])); // Convert string time to date time
 		if($formData['key_set'] == 'pick_up')
-			$formData['pick_up_date'] = date('Y-m-d H:i:s',strtotime($formData['key_pick_up_from']));
+			$formData['pick_up_date'] = $this->convert_datetime($formData['key_pick_up_from']);// date('Y-m-d H:i:s',strtotime($formData['key_pick_up_from']));
 		else if($formData['key_set'] == 'drop_off')
-			$formData['pick_up_date'] = date('Y-m-d H:i:s',strtotime($formData['key_drop_off_date']));
+			$formData['pick_up_date'] = $this->convert_datetime($formData['key_drop_off_date']);// date('Y-m-d H:i:s',strtotime($formData['key_drop_off_date']));
 		
 		$address = (array)json_decode($formData['address']);
 
@@ -102,24 +112,24 @@ class Steps extends CI_Controller {
 		}
 		
 		if( isset($formData['key_pick_up_from']) ){
-			$formData['key_pick_up_from'] = date('Y-m-d H:i:s',strtotime($formData['key_pick_up_from']));
+			$formData['key_pick_up_from'] = $this->convert_datetime($formData['key_pick_up_from']);// date('Y-m-d H:i:s',strtotime($formData['key_pick_up_from']));
 		}
 
 		if( isset($formData['key_pick_up_to']) ){
-			$formData['key_pick_up_to'] = date('Y-m-d H:i:s',strtotime($formData['key_pick_up_to']));
+			$formData['key_pick_up_to'] = $this->convert_datetime($formData['key_pick_up_to']);// date('Y-m-d H:i:s',strtotime($formData['key_pick_up_to']));
 		}
 
 		if( isset($formData['key_drop_off_date']) ){
-			$formData['key_drop_off_date'] = date('Y-m-d H:i:s',strtotime($formData['key_drop_off_date']));
+			$formData['key_drop_off_date'] = $this->convert_datetime($formData['key_drop_off_date']);// date('Y-m-d H:i:s',strtotime($formData['key_drop_off_date']));
 		}
 
 
 		// Service date time picker
 		if( isset($formData['service_datetime']) && !empty($formData['service_datetime'])){
-			$formData['service_datetime'] = date('Y-m-d H:i:s',strtotime($formData['service_datetime']));
+			$formData['service_datetime'] = $this->convert_datetime($formData['service_datetime']);// date('Y-m-d H:i:s',strtotime($formData['service_datetime']));
 		}
-
 		
+
 		$formData = array_merge($formData,$address);
 		
 		//Set user ID
@@ -251,7 +261,7 @@ class Steps extends CI_Controller {
 		$diff = $date2->diff($date1);
 		$pickup_time = $diff->h;
 		$pickup_time = $pickup_time + ($diff->days*24);
-		
+
 		if( $pickup_time < 24 ){
 			$_last_minute_booking24 = $this->getService('Last Minute Booking less than 24h',$services);
 			if( isset($_last_minute_booking24) )
